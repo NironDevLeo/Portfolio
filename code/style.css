@@ -1,0 +1,643 @@
+@font-face {
+    font-family: 'font1';
+    src: url(./static/font/GameCube.ttf);
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url(./static/font/big_noodle_titling\ copie.ttf);
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url(./static/font/roboto/Roboto-Medium.ttf);
+}
+
+html {
+    width: 100%;
+    font-size: 10px;
+}
+
+.font1 {
+    font-family: 'font1';
+}
+
+body {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#fontEcran {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(0, 0, 0) 50%);
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+#effect {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+
+
+/* -------------------Curseur----------------- */
+.cursor {
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    z-index: 80;
+    border: 1px rgb(141, 141, 141) solid;
+    height: 40px;
+    width: 40px;
+    transition: all 300ms ease-out;
+}
+
+
+
+
+/* ------------Boite de rangement des cubes----------------- */
+#tilt {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    display: block;
+    margin: 0 auto;
+    transform: rotateX(20deg);
+    transform: rotateY(35deg);
+}
+
+/* --------------------Gros cube----------------- */
+#box1 {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    width: 400px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    height: 400px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    perspective: 1000px;
+}
+
+.face {
+    position: absolute;
+    width: 400px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    height: 400px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    background-color: #000;
+    border-radius: 0px;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.backgroundTop {
+    background: rgb(94, 94, 94);
+    background: linear-gradient(90deg, rgba(94, 94, 94, 1) 0%, rgba(117, 117, 117, 1) 100%);
+}
+
+.backgroundLeft {
+    background: rgb(24, 24, 24);
+    background: linear-gradient(90deg, rgb(37, 37, 37) 0%, rgb(33, 33, 33));
+}
+
+.backgroundFront {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(9, 9, 9) 0%, rgb(23, 23, 23) 100%);
+}
+
+/* augmenter ou diminuer translateZ a moitier de (-1-) */
+.top {
+    transform: rotateX(90deg) translateZ(200px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(200px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(200px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(200px);
+}
+
+.back {
+    transform: rotateY(-180deg) translateZ(200px);
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(200px);
+}
+
+
+
+
+/* --------décord sur le cube-------- */
+.trait1 {
+    height: 2px;
+    background-color: #42FF00;
+    width: 200%;
+    transform: rotateZ(45deg);
+    margin-top: 60%;
+    position: absolute;
+    box-shadow: 5px 0px 50px 23px #55FF00;
+}
+
+.trait2 {
+    height: 2px;
+    background-color: #42FF00;
+    width: 300%;
+    transform: rotateZ(147deg);
+    margin-top: 20%;
+    margin-right: 40%;
+    position: absolute;
+    box-shadow: 5px 0px 50px 23px #55FF00;
+}
+
+
+
+
+
+
+/* -------------petits cubes-------------- */
+.face2 {
+    position: absolute;
+    width: 100px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    height: 100px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    background-color: #000;
+    border-radius: 0px;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.top2 {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom2 {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.right2 {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.left2 {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.back2 {
+    transform: rotateY(-180deg) translateZ(50px);
+}
+
+.front2 {
+    transform: rotateY(0deg) translateZ(50px);
+}
+
+#box2 {
+    position: relative;
+    transform-style: preserve-3d;
+    margin-left: -100%;
+    margin-top: 10%;
+    transform: translateZ(180px) rotateZ(18deg);
+}
+
+#box3 {
+    position: relative;
+    transform-style: preserve-3d;
+    margin-left: 200%;
+    transform: rotateZ(239deg) translateY(68px) translateZ(40px);
+}
+
+#box4 {
+    position: relative;
+    transform-style: preserve-3d;
+    margin-left: 250%;
+    margin-top: 40%;
+    transform: translateZ(-500px) rotateZ(45deg);
+}
+
+
+
+
+/* -------------Mini Cube---------------- */
+
+.face3 {
+    position: absolute;
+    width: 10px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    height: 10px;
+    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    background-color: #000;
+    border-radius: 0px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.top3 {
+    transform: rotateX(90deg) translateZ(5px);
+}
+
+.bottom3 {
+    transform: rotateX(-90deg) translateZ(5px);
+}
+
+.right3 {
+    transform: rotateY(90deg) translateZ(5px);
+}
+
+.left3 {
+    transform: rotateY(-90deg) translateZ(5px);
+}
+
+.back3 {
+    transform: rotateY(-180deg) translateZ(5px);
+}
+
+.front3 {
+    transform: rotateY(0deg) translateZ(5px);
+}
+
+#miniBox1 {
+    position: relative;
+    transform-style: preserve-3d;
+    margin-left: 120%;
+    transform: rotateZ(29deg) translateZ(-350px);
+}
+
+#miniBox2 {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateZ(29deg) translateZ(-89px) translateY(415px) translateX(-66px);
+}
+
+
+
+/*-------- page------------ */
+
+/* ---------------Header ------------------*/
+header {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+
+
+    /* --------------------------------------------------------------------------------- */
+    /* display: none; */
+    /* --------------------------------------------------------------------------------- */
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 0em;
+    font-family: 'font1';
+
+}
+
+h2 {
+    font-size: 4em;
+
+}
+
+.blanc {
+    color: #fff;
+}
+
+
+
+
+/*--------------- menu de navigation --------------------*/
+nav {
+    position: absolute;
+    padding-top: 20px;
+    width: 100%;
+    opacity: 0;
+    z-index: 20;
+}
+
+ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+
+li {
+    position: relative;
+    padding: 10px 30px;
+    border: solid 2px #42FF00;
+    color: #42FF00;
+    text-decoration: none;
+    font-size: 3em;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    z-index: 30;
+    cursor: pointer;
+    font-family: 'font2';
+}
+
+li::before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+
+li::after {
+    content: " ";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+li:hover::before,
+a:hover::after {
+    width: 100px;
+    height: 100px;
+    transition-delay: 0s;
+}
+
+li:hover {
+    background: #42FF00;
+    color: #000;
+    box-shadow: 0 0 50px #44ff00;
+    transition-delay: 0.3s;
+}
+
+#effet4 {
+    height: 50px;
+    font-family: 'font1';
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------Section 1--------------- */
+
+#section1 {
+    margin-top: 100vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: absolute;
+}
+
+.cartes {
+    display: flex;
+    width: 80%;
+}
+
+
+.typeH4 {
+    font-size: 4em;
+    font-family: 'font2';
+    letter-spacing: 4px;
+}
+
+.typeH5 {
+    font-size: 2em;
+    font-family: 'font2';
+    letter-spacing: 4px;
+    margin-block: 0;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+.titreTechno{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: solid 2px #42FF00;
+}
+.txtTechno{
+    margin: 10px;
+    padding-top: 10px;
+    letter-spacing: 2.8pt;
+    word-spacing: 5.6pt;
+    line-height: 1.4;
+    font-size: 1.7em;
+    font-family: 'font3';
+    text-align: justify;
+}
+.green{
+    color: #42FF00;
+}
+.dmComp {
+    font-size: 1.7em;
+    font-family: 'font3';
+    margin-left: 30px;
+    margin-block: 0;
+    margin: 10px 0px 20px 0;
+}
+.margintxt{
+    margin-left: 20px;
+}
+.imgLogo {
+    width: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(116, 116, 116);
+    border: solid 2px #42FF00;
+    box-shadow: 8px 8px 16px #42FF00, -8px -8px 16px #45FF00;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    transition: 0.3s;
+}
+.imgLogo:hover{
+    width: 50px;
+    transition: 0.3s;
+    background-color: #42FF00;
+}
+
+.flexArround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    width: 33%;
+}
+.card2 {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cardLogo1{
+    width: 80%;
+    height: 40px;
+}
+.portCard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#textLogo{
+    height: 100px;
+    width: 80%;
+    border: solid #42FF00;
+    border-radius: 10px;
+}
+.textTechno{
+    width: 80%;
+    height: 0;
+    margin-top: -10px;
+    border-radius: 10px;
+    border: solid 2px #42FF00;
+    opacity: 0;
+}
+
+
+
+
+
+
+/* ----------------------SECTION2------------ */
+
+#section2 {
+    margin-top: 200vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: absolute;
+}
+
+.cardProjets{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.separator{
+    width: 80%;
+    height: 2px;
+    background-color: #42FF00;
+}
+.projetList{
+    padding: 20px 0;
+    width: 80%;
+    text-align: end;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    transition: 0.3s;
+}
+.projetList:hover{
+   background-color: #42FF00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------SECTION3------------ */
+
+#section3 {
+    margin-top: 300vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: absolute;
+}
+
+
+
+/* ----------------------SECTION4------------ */
+
+#section4 {
+    margin-top: 400vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: absolute;
+}
