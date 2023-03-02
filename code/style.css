@@ -556,7 +556,6 @@ li:hover {
 
 .textTechno {
     width: 100%;
-    height: 0;
     margin-top: -10px;
     border-radius: 10px;
     border: solid 2px #42FF00;
@@ -570,7 +569,7 @@ li:hover {
 
 
 
-/* ----------------------SECTION2------------ */
+/* -------------SECTION2------------ */
 
 #section2 {
     margin-top: 200vh;
@@ -740,26 +739,27 @@ li:hover {
         height: 350px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
+
     .top {
         transform: rotateX(90deg) translateZ(175px);
     }
-    
+
     .bottom {
         transform: rotateX(-90deg) translateZ(175px);
     }
-    
+
     .right {
         transform: rotateY(90deg) translateZ(175px);
     }
-    
+
     .left {
         transform: rotateY(-90deg) translateZ(175px);
     }
-    
+
     .back {
         transform: rotateY(-180deg) translateZ(175px);
     }
-    
+
     .front {
         transform: rotateY(0deg) translateZ(175px);
     }
@@ -769,28 +769,29 @@ li:hover {
         width: 90px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
         height: 90px;
-        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
+
     .top2 {
         transform: rotateX(90deg) translateZ(45px);
     }
-    
+
     .bottom2 {
         transform: rotateX(-90deg) translateZ(45px);
     }
-    
+
     .right2 {
         transform: rotateY(90deg) translateZ(45px);
     }
-    
+
     .left2 {
         transform: rotateY(-90deg) translateZ(45px);
     }
-    
+
     .back2 {
         transform: rotateY(-180deg) translateZ(45px);
     }
-    
+
     .front2 {
         transform: rotateY(0deg) translateZ(45px);
     }
@@ -823,67 +824,69 @@ li:hover {
         margin-right: 10px;
     }
 
-        /* -----CUBES------ */
-        .face {
-            width: 300px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-            height: 300px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-        }
-        .top {
-            transform: rotateX(90deg) translateZ(150px);
-        }
-        
-        .bottom {
-            transform: rotateX(-90deg) translateZ(150px);
-        }
-        
-        .right {
-            transform: rotateY(90deg) translateZ(150px);
-        }
-        
-        .left {
-            transform: rotateY(-90deg) translateZ(150px);
-        }
-        
-        .back {
-            transform: rotateY(-180deg) translateZ(150px);
-        }
-        
-        .front {
-            transform: rotateY(0deg) translateZ(150px);
-        }
-    
-    
-        .face2 {
-            width: 90px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-            height: 90px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
-        }
-        .top2 {
-            transform: rotateX(90deg) translateZ(45px);
-        }
-        
-        .bottom2 {
-            transform: rotateX(-90deg) translateZ(45px);
-        }
-        
-        .right2 {
-            transform: rotateY(90deg) translateZ(45px);
-        }
-        
-        .left2 {
-            transform: rotateY(-90deg) translateZ(45px);
-        }
-        
-        .back2 {
-            transform: rotateY(-180deg) translateZ(45px);
-        }
-        
-        .front2 {
-            transform: rotateY(0deg) translateZ(45px);
-        }
+    /* -----CUBES------ */
+    .face {
+        width: 300px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 300px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(150px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(150px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(150px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    .back {
+        transform: rotateY(-180deg) translateZ(150px);
+    }
+
+    .front {
+        transform: rotateY(0deg) translateZ(150px);
+    }
+
+
+    .face2 {
+        width: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    }
+
+    .top2 {
+        transform: rotateX(90deg) translateZ(45px);
+    }
+
+    .bottom2 {
+        transform: rotateX(-90deg) translateZ(45px);
+    }
+
+    .right2 {
+        transform: rotateY(90deg) translateZ(45px);
+    }
+
+    .left2 {
+        transform: rotateY(-90deg) translateZ(45px);
+    }
+
+    .back2 {
+        transform: rotateY(-180deg) translateZ(45px);
+    }
+
+    .front2 {
+        transform: rotateY(0deg) translateZ(45px);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -911,33 +914,34 @@ li:hover {
 
 
 
-     /* -----CUBES------ */
-     .face {
+    /* -----CUBES------ */
+    .face {
         width: 250px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
         height: 250px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
+
     .top {
         transform: rotateX(90deg) translateZ(125px);
     }
-    
+
     .bottom {
         transform: rotateX(-90deg) translateZ(125px);
     }
-    
+
     .right {
         transform: rotateY(90deg) translateZ(125px);
     }
-    
+
     .left {
         transform: rotateY(-90deg) translateZ(125px);
     }
-    
+
     .back {
         transform: rotateY(-180deg) translateZ(125px);
     }
-    
+
     .front {
         transform: rotateY(0deg) translateZ(125px);
     }
@@ -947,28 +951,29 @@ li:hover {
         width: 90px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
         height: 90px;
-        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
+
     .top2 {
         transform: rotateX(90deg) translateZ(45px);
     }
-    
+
     .bottom2 {
         transform: rotateX(-90deg) translateZ(45px);
     }
-    
+
     .right2 {
         transform: rotateY(90deg) translateZ(45px);
     }
-    
+
     .left2 {
         transform: rotateY(-90deg) translateZ(45px);
     }
-    
+
     .back2 {
         transform: rotateY(-180deg) translateZ(45px);
     }
-    
+
     .front2 {
         transform: rotateY(0deg) translateZ(45px);
     }
@@ -1009,74 +1014,76 @@ li:hover {
 
 
 
-         /* -----CUBES------ */
-         .face {
-            width: 180px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-            height: 180px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-        }
-        .top {
-            transform: rotateX(90deg) translateZ(90px);
-        }
-        
-        .bottom {
-            transform: rotateX(-90deg) translateZ(90px);
-        }
-        
-        .right {
-            transform: rotateY(90deg) translateZ(90px);
-        }
-        
-        .left {
-            transform: rotateY(-90deg) translateZ(90px);
-        }
-        
-        .back {
-            transform: rotateY(-180deg) translateZ(90px);
-        }
-        
-        .front {
-            transform: rotateY(0deg) translateZ(90px);
-        }
-    
-    
-        .face2 {
-            width: 90px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-            height: 90px;
-            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
-        }
-        .top2 {
-            transform: rotateX(90deg) translateZ(45px);
-        }
-        
-        .bottom2 {
-            transform: rotateX(-90deg) translateZ(45px);
-        }
-        
-        .right2 {
-            transform: rotateY(90deg) translateZ(45px);
-        }
-        
-        .left2 {
-            transform: rotateY(-90deg) translateZ(45px);
-        }
-        
-        .back2 {
-            transform: rotateY(-180deg) translateZ(45px);
-        }
-        
-        .front2 {
-            transform: rotateY(0deg) translateZ(45px);
-        }
+    /* -----CUBES------ */
+    .face {
+        width: 180px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 180px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(90px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(90px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(90px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(90px);
+    }
+
+    .back {
+        transform: rotateY(-180deg) translateZ(90px);
+    }
+
+    .front {
+        transform: rotateY(0deg) translateZ(90px);
+    }
 
 
-        .trait1 {
-            box-shadow: 4px 0px 40px 18px #55FF00;
-        }
-        
-        .trait2 {
-            box-shadow: 4px 0px 40px 18px #55FF00;
-        }
+    .face2 {
+        width: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    }
+
+    .top2 {
+        transform: rotateX(90deg) translateZ(45px);
+    }
+
+    .bottom2 {
+        transform: rotateX(-90deg) translateZ(45px);
+    }
+
+    .right2 {
+        transform: rotateY(90deg) translateZ(45px);
+    }
+
+    .left2 {
+        transform: rotateY(-90deg) translateZ(45px);
+    }
+
+    .back2 {
+        transform: rotateY(-180deg) translateZ(45px);
+    }
+
+    .front2 {
+        transform: rotateY(0deg) translateZ(45px);
+    }
+
+
+    .trait1 {
+        box-shadow: 4px 0px 40px 18px #55FF00;
+    }
+
+    .trait2 {
+        box-shadow: 4px 0px 40px 18px #55FF00;
+    }
 }

@@ -81,24 +81,24 @@ let textSql = document.getElementById("textSql");
 
 // fonction qui fait l'arrivée du texte des logos page "mes compétences"
 function txt(logo, texte) {
+
   logo.addEventListener('mouseover', () => {
     texte.style.display = 'block';
-    setTimeout(overtxt(texte), 10);
-
+    setTimeout(() => {
+      overtxt(texte);
+    }, 10);
   });
+
   logo.addEventListener('mouseout', () => {
-    texte.style.opacity = '0';
-    outtxt(texte);
+      texte.style.display = 'none';
   })
 }
 
 function overtxt(param) {
-  param.style.transition = '1s';
+  param.style.transition = '650ms';
   param.style.height = 'auto';
   param.style.opacity = '1';
-}
-function outtxt(param) {
-  param.style.display = 'none'
+  param.style.height ='auto';
 }
 
 txt(logoHtml, textHtml);
