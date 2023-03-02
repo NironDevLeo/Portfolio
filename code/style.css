@@ -89,10 +89,8 @@ body {
 }
 
 .container {
-    width: 400px;
-    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
-    height: 400px;
-    /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    width: 25%;
+    height: 50%;
     perspective: 1000px;
 }
 
@@ -323,9 +321,11 @@ header {
 }
 
 h1 {
-    font-size: 0em;
+    font-size: 80px;
     font-family: 'font1';
-
+    animation-name: titre;
+    animation-duration: 2s;
+    transition: 1s;
 }
 
 h2 {
@@ -351,7 +351,6 @@ nav {
 
 ul {
     position: relative;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -417,6 +416,7 @@ li:hover {
 
 
 
+/* --------------------Menu Mobile-------------- */
 
 
 
@@ -454,6 +454,7 @@ li:hover {
     letter-spacing: 4px;
     margin-block: 0;
 }
+
 .flex {
     display: flex;
     align-items: center;
@@ -465,12 +466,14 @@ li:hover {
     margin-right: 10px;
 
 }
-.titreTechno{
+
+.titreTechno {
     margin-left: 10%;
     margin-right: 10%;
     border-bottom: solid 2px #42FF00;
 }
-.txtTechno{
+
+.txtTechno {
     margin: 10px;
     padding-top: 10px;
     letter-spacing: 2.8pt;
@@ -480,9 +483,11 @@ li:hover {
     font-family: 'font3';
     text-align: justify;
 }
-.green{
+
+.green {
     color: #42FF00;
 }
+
 .dmComp {
     font-size: 1.7em;
     font-family: 'font3';
@@ -490,11 +495,13 @@ li:hover {
     margin-block: 0;
     margin: 10px 0px 20px 0;
 }
-.margintxt{
+
+.margintxt {
     margin-left: 20px;
 }
+
 .imgLogo {
-    width: 40px;
+    width: 35px;
     padding: 8px;
     border-radius: 8px;
     background-color: rgba(116, 116, 116);
@@ -505,7 +512,8 @@ li:hover {
     z-index: 20;
     transition: 0.3s;
 }
-.imgLogo:hover{
+
+.imgLogo:hover {
     width: 50px;
     transition: 0.3s;
     background-color: #42FF00;
@@ -516,9 +524,11 @@ li:hover {
     justify-content: space-around;
     align-items: center;
 }
+
 .card {
     width: 33%;
 }
+
 .card2 {
     width: 33%;
     display: flex;
@@ -526,28 +536,33 @@ li:hover {
     align-items: flex-end;
 }
 
-.cardLogo1{
+.cardLogo1 {
     width: 80%;
     height: 40px;
 }
-.portCard{
+
+.portCard {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-#textLogo{
+
+#textLogo {
     height: 100px;
     width: 80%;
     border: solid #42FF00;
     border-radius: 10px;
 }
-.textTechno{
-    width: 80%;
+
+.textTechno {
+    width: 100%;
     height: 0;
     margin-top: -10px;
     border-radius: 10px;
     border: solid 2px #42FF00;
     opacity: 0;
+    display: none;
+    transition: 1s;
 }
 
 
@@ -568,17 +583,19 @@ li:hover {
     position: absolute;
 }
 
-.cardProjets{
+.cardProjets {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-.separator{
+
+.separator {
     width: 80%;
     height: 2px;
     background-color: #42FF00;
 }
-.projetList{
+
+.projetList {
     padding: 20px 0;
     width: 80%;
     text-align: end;
@@ -587,17 +604,18 @@ li:hover {
     z-index: 20;
     transition: 0.3s;
 }
-.projetList:hover{
-   background-color: #42FF00;
+
+.projetList:hover {
+    background-color: #42FF00;
 }
 
-#card1{
+#card1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#carrouss{
+#carrouss {
     width: 80%;
     height: 80%;
     background-color: #44ff00;
@@ -651,4 +669,414 @@ li:hover {
     flex-direction: column;
     padding-top: 100px;
     position: absolute;
+}
+
+
+/* annimation de titre */
+@keyframes titre {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* ------------------RESPONSIVE--------------------- */
+@media (max-width: 1800px) {
+    html {
+        font-size: 8px
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 6px
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .navBtn {
+        font-size: 4em;
+    }
+
+    .imgLogo {
+        width: 30px;
+    }
+
+    .imgLogo:hover {
+        width: 40px;
+    }
+
+    .cardseparator {
+        width: 25%;
+    }
+
+    .cardDomaine {
+        width: 40%;
+    }
+
+
+    /* -----CUBES------ */
+    .face {
+        width: 350px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 350px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    }
+    .top {
+        transform: rotateX(90deg) translateZ(175px);
+    }
+    
+    .bottom {
+        transform: rotateX(-90deg) translateZ(175px);
+    }
+    
+    .right {
+        transform: rotateY(90deg) translateZ(175px);
+    }
+    
+    .left {
+        transform: rotateY(-90deg) translateZ(175px);
+    }
+    
+    .back {
+        transform: rotateY(-180deg) translateZ(175px);
+    }
+    
+    .front {
+        transform: rotateY(0deg) translateZ(175px);
+    }
+
+
+    .face2 {
+        width: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
+    }
+    .top2 {
+        transform: rotateX(90deg) translateZ(45px);
+    }
+    
+    .bottom2 {
+        transform: rotateX(-90deg) translateZ(45px);
+    }
+    
+    .right2 {
+        transform: rotateY(90deg) translateZ(45px);
+    }
+    
+    .left2 {
+        transform: rotateY(-90deg) translateZ(45px);
+    }
+    
+    .back2 {
+        transform: rotateY(-180deg) translateZ(45px);
+    }
+    
+    .front2 {
+        transform: rotateY(0deg) translateZ(45px);
+    }
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 6px
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .navBtn {
+        font-size: 4em;
+    }
+
+    .imgLogo {
+        width: 25px;
+    }
+
+    .imgLogo:hover {
+        width: 35px;
+    }
+
+    .icone {
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+    }
+
+        /* -----CUBES------ */
+        .face {
+            width: 300px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+            height: 300px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        
+        .bottom {
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        
+        .right {
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        
+        .left {
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        
+        .back {
+            transform: rotateY(-180deg) translateZ(150px);
+        }
+        
+        .front {
+            transform: rotateY(0deg) translateZ(150px);
+        }
+    
+    
+        .face2 {
+            width: 90px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+            height: 90px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
+        }
+        .top2 {
+            transform: rotateX(90deg) translateZ(45px);
+        }
+        
+        .bottom2 {
+            transform: rotateX(-90deg) translateZ(45px);
+        }
+        
+        .right2 {
+            transform: rotateY(90deg) translateZ(45px);
+        }
+        
+        .left2 {
+            transform: rotateY(-90deg) translateZ(45px);
+        }
+        
+        .back2 {
+            transform: rotateY(-180deg) translateZ(45px);
+        }
+        
+        .front2 {
+            transform: rotateY(0deg) translateZ(45px);
+        }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 5px
+    }
+
+    .navBtn {
+        font-size: 4em;
+    }
+
+    .imgLogo {
+        width: 25px;
+    }
+
+    .imgLogo:hover {
+        width: 35px;
+    }
+
+    .icone {
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+    }
+
+
+
+     /* -----CUBES------ */
+     .face {
+        width: 250px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 250px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+    }
+    .top {
+        transform: rotateX(90deg) translateZ(125px);
+    }
+    
+    .bottom {
+        transform: rotateX(-90deg) translateZ(125px);
+    }
+    
+    .right {
+        transform: rotateY(90deg) translateZ(125px);
+    }
+    
+    .left {
+        transform: rotateY(-90deg) translateZ(125px);
+    }
+    
+    .back {
+        transform: rotateY(-180deg) translateZ(125px);
+    }
+    
+    .front {
+        transform: rotateY(0deg) translateZ(125px);
+    }
+
+
+    .face2 {
+        width: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        height: 90px;
+        /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
+    }
+    .top2 {
+        transform: rotateX(90deg) translateZ(45px);
+    }
+    
+    .bottom2 {
+        transform: rotateX(-90deg) translateZ(45px);
+    }
+    
+    .right2 {
+        transform: rotateY(90deg) translateZ(45px);
+    }
+    
+    .left2 {
+        transform: rotateY(-90deg) translateZ(45px);
+    }
+    
+    .back2 {
+        transform: rotateY(-180deg) translateZ(45px);
+    }
+    
+    .front2 {
+        transform: rotateY(0deg) translateZ(45px);
+    }
+}
+
+@media (max-width: 850px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .navBtn {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navBtn {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 680px) {
+    .navBtn {
+        font-size: 3.5em;
+    }
+
+    .imgLogo {
+        width: 15px;
+    }
+
+    .imgLogo:hover {
+        width: 18px;
+    }
+
+    .dmComp {
+        margin: 8px 0px 10px 0;
+    }
+
+
+
+         /* -----CUBES------ */
+         .face {
+            width: 180px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+            height: 180px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(90px);
+        }
+        
+        .bottom {
+            transform: rotateX(-90deg) translateZ(90px);
+        }
+        
+        .right {
+            transform: rotateY(90deg) translateZ(90px);
+        }
+        
+        .left {
+            transform: rotateY(-90deg) translateZ(90px);
+        }
+        
+        .back {
+            transform: rotateY(-180deg) translateZ(90px);
+        }
+        
+        .front {
+            transform: rotateY(0deg) translateZ(90px);
+        }
+    
+    
+        .face2 {
+            width: 90px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
+            height: 90px;
+            /* (-1-) augmenter ou diminuer selon taille écran pour le cube */    
+        }
+        .top2 {
+            transform: rotateX(90deg) translateZ(45px);
+        }
+        
+        .bottom2 {
+            transform: rotateX(-90deg) translateZ(45px);
+        }
+        
+        .right2 {
+            transform: rotateY(90deg) translateZ(45px);
+        }
+        
+        .left2 {
+            transform: rotateY(-90deg) translateZ(45px);
+        }
+        
+        .back2 {
+            transform: rotateY(-180deg) translateZ(45px);
+        }
+        
+        .front2 {
+            transform: rotateY(0deg) translateZ(45px);
+        }
+
+
+        .trait1 {
+            box-shadow: 4px 0px 40px 18px #55FF00;
+        }
+        
+        .trait2 {
+            box-shadow: 4px 0px 40px 18px #55FF00;
+        }
 }

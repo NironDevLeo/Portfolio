@@ -37,11 +37,6 @@ setTimeout(() => {
   effect1.style.opacity = "1";
 }, 3500);
 
-setTimeout(() => {
-  let effect2 = document.getElementById('effet2');
-  effect2.style.transition = "1s";
-  effect2.style.fontSize = "10em"
-}, 200);
 
 let message2 = "JOSEPH LEO";
 I = -15;
@@ -85,29 +80,32 @@ let textSql = document.getElementById("textSql");
 
 
 // fonction qui fait l'arrivée du texte des logos page "mes compétences"
-function txt(logo,texte) {
+function txt(logo, texte) {
   logo.addEventListener('mouseover', () => {
-    texte.style.opacity = '1';
+    texte.style.display = 'block';
     setTimeout(overtxt(texte), 10);
+
   });
   logo.addEventListener('mouseout', () => {
     texte.style.opacity = '0';
     outtxt(texte);
   })
 }
-function overtxt(param){
-  param.style.transition= '1s';
-  param.style.height = '400px';
+
+function overtxt(param) {
+  param.style.transition = '1s';
+  param.style.height = 'auto';
+  param.style.opacity = '1';
 }
-function outtxt(param){
-  param.style.height = 0;
+function outtxt(param) {
+  param.style.display = 'none'
 }
 
-txt(logoHtml,textHtml);
-txt(logoCss,textCss);
-txt(logoJs,textJs);
-txt(logoPhp,textPhp);
-txt(logoSql,textSql);
+txt(logoHtml, textHtml);
+txt(logoCss, textCss);
+txt(logoJs, textJs);
+txt(logoPhp, textPhp);
+txt(logoSql, textSql);
 
 
 
@@ -142,21 +140,21 @@ let btnContacter = document.getElementById('contacter');
 
 let test = document.getElementById('test');
 
-btnBienvenue.addEventListener('click',()=>{
-    header.style.marginTop = '0';
-    competences.style.marginTop = '100vh';
-    travail.style.marginTop = '200vh';
-    experience.style.marginTop = '300vh';
-    contacter.style.marginTop = '400vh';
+btnBienvenue.addEventListener('click', () => {
+  header.style.marginTop = '0';
+  competences.style.marginTop = '100vh';
+  travail.style.marginTop = '200vh';
+  experience.style.marginTop = '300vh';
+  contacter.style.marginTop = '400vh';
 
-    header.style.transition = '2s ease-in-out';
-    competences.style.transition = '2s ease-in-out';
-    travail.style.transition = '2s ease-in-out';
-    experience.style.transition = '2s ease-in-out';
-    contacter.style.transition = '2s ease-in-out';
+  header.style.transition = '2s ease-in-out';
+  competences.style.transition = '2s ease-in-out';
+  travail.style.transition = '2s ease-in-out';
+  experience.style.transition = '2s ease-in-out';
+  contacter.style.transition = '2s ease-in-out';
 })
 
-btnCompetences.addEventListener('click',()=>{
+btnCompetences.addEventListener('click', () => {
   header.style.marginTop = '-100vh';
   competences.style.marginTop = '0';
   travail.style.marginTop = '100vh';
@@ -170,7 +168,7 @@ btnCompetences.addEventListener('click',()=>{
   contacter.style.transition = '2s ease-in-out';
 })
 
-btnTravail.addEventListener('click',()=>{
+btnTravail.addEventListener('click', () => {
   header.style.marginTop = '-200vh';
   competences.style.marginTop = '-100vh';
   travail.style.marginTop = '0';
@@ -184,7 +182,7 @@ btnTravail.addEventListener('click',()=>{
   contacter.style.transition = '2s ease-in-out';
 })
 
-btnExperience.addEventListener('click',()=>{
+btnExperience.addEventListener('click', () => {
   header.style.marginTop = '-300vh';
   competences.style.marginTop = '-200vh';
   travail.style.marginTop = '-100vh';
@@ -198,7 +196,7 @@ btnExperience.addEventListener('click',()=>{
   contacter.style.transition = '2s ease-in-out';
 })
 
-btnContacter.addEventListener('click',()=>{
+btnContacter.addEventListener('click', () => {
   header.style.marginTop = '-400vh';
   competences.style.marginTop = '-300vh';
   travail.style.marginTop = '-200vh';

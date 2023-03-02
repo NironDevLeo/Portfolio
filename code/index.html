@@ -10,17 +10,19 @@
 </head>
 
 <body>
+	<!-- menu nav pc -->
 	<nav id="effet1">
 		<ul>
-			<li class="uppercase blanc" id="bienvenue">bienvenue</li>
-			<li class="uppercase blanc" id="competences">mes compétences</li>
-			<li class="uppercase blanc" id="travail">mon travail</li>
-			<li class="uppercase blanc" id="experience">mon expérience</li>
-			<li class="uppercase blanc" id="contacter">me contacter</li>
+			<li class="uppercase blanc navBtn" id="bienvenue">bienvenue</li>
+			<li class="uppercase blanc navBtn" id="competences">mes compétences</li>
+			<li class="uppercase blanc navBtn" id="travail">mon travail</li>
+			<li class="uppercase blanc navBtn" id="experience">mon expérience</li>
+			<li class="uppercase blanc navBtn" id="contacter">me contacter</li>
 		</ul>
 	</nav>
+
 	<header id="header">
-		<h1 id="effet2" class="uppercase blanc">developpeur web</h1>
+		<h1 id="effet2" class="uppercase blanc respTitre">developpeur web</h1>
 		<h2 id="effet4" class="uppercase blanc"></h2>
 	</header>
 
@@ -136,10 +138,10 @@
 		<h2 class="uppercase font1 blanc">mes competences</h2>
 
 		<div class="cartes">
-			<div class="card">
+			<div class="card cardDomaine">
 				<h4 class="typeH4 blanc">Domaines de compétences</h4>
-				
-				
+
+
 				<div class="flex">
 					<img class="icone" src="./static/icone/jaccepte.png" alt="icone">
 					<h5 class="typeH5 blanc uppercase">Gestion de projets web</h5>
@@ -178,7 +180,7 @@
 
 			</div>
 
-			<div class="card"></div>
+			<div class="card cardseparator"></div>
 
 			<div class="card card2">
 				<h4 class="typeH4 blanc">technologies</h4>
@@ -192,47 +194,54 @@
 					</div>
 
 				</div>
-				<div class="textTechno" id="textHtml">
-					<h4 class="blanc uppercase typeH4 font1 titreTechno">HTML</h4>
-					<p class="blanc font3 txtTechno"><span class="margintxt"></span> Code aérée, commenté, facile à
-						comprendre, avec uttilisation de <span class="green">balises sémantiques</span> et de <span
-							class="green">classes</span> afin de privilégier avant tout le bon fonctionnement et le
-						<span class="green">référencement</span> .</p>
-				</div>
-				<div class="textTechno" id="textCss">
-					<h4 class="blanc uppercase typeH4 font1 titreTechno">CSS</h4>
-					<p class="blanc font3 txtTechno"><span class="margintxt"></span>Privilégier le <span
-							class="green">design</span> avec une bonne nuance de couleurs, épuré pour une <span
-							class="green">meilleure visibilitée</span>. Le but du jeu n'est-il pas que le client se
-						rappelle du site?</p>
+				<div id="repereTxtTechno">
+					<div class="textTechno" id="textHtml">
+						<h4 class="blanc uppercase typeH4 font1 titreTechno">HTML</h4>
+						<p class="blanc font3 txtTechno"><span class="margintxt"></span> Code aérée, commenté, facile à
+							comprendre, avec uttilisation de <span class="green">balises sémantiques</span> et de <span
+								class="green">classes</span> afin de privilégier avant tout le bon fonctionnement et le
+							<span class="green">référencement</span> .
+						</p>
+					</div>
+					<div class="textTechno" id="textCss">
+						<h4 class="blanc uppercase typeH4 font1 titreTechno">CSS</h4>
+						<p class="blanc font3 txtTechno"><span class="margintxt"></span>Privilégier le <span
+								class="green">design</span> avec une bonne nuance de couleurs, épuré pour une <span
+								class="green">meilleure visibilitée</span>. Le but du jeu n'est-il pas que le client se
+							rappelle du site?</p>
+
+					</div>
+					<div class="textTechno" id="textJs">
+						<h4 class="blanc uppercase typeH4 font1 titreTechno">JS</h4>
+						<p class="blanc font3 txtTechno"><span class="margintxt"></span>Un <span class="green">maximum
+								de fonctions</span> sans trop allourdir le code. Sachez que <span class="green">Java
+								Script</span> est mon meilleur ami, j'ai un doute sur 2+2 ? Je créer une fonction qui
+							fait le calcul à ma place.</p>
+
+					</div>
+					<div class="textTechno" id="textPhp">
+						<h4 class="blanc uppercase typeH4 font1 titreTechno">PHP</h4>
+						<p class="blanc font3 txtTechno"><span class="margintxt"></span>PHP me permet de réaliser des
+							connections aux <span class="green">bases de données</span> et de faire les liens fichiers.
+							Besoin d'un <span class="green">DashBoard</span> administrateur pour votre <span
+								class="green">E-commerce</span> avec un système ergonomique et facile à manipuler pour
+							ajouter vos articles? Je m'en occupe.</p>
+
+					</div>
+					<div class="textTechno" id="textSql">
+						<h4 class="blanc uppercase typeH4 font1 titreTechno">SQL</h4>
+						<p class="blanc font3 txtTechno"><span class="margintxt"></span>Une <span
+								class="green">création</span> de base de donnée complexe à partir de quelques fichiers
+							<span class="green">SQL</span>. Des sélections à partir de <span class="green">barre de
+								recherche</span>. Un <span class="green">filtre</span> pour trier par anciennetée. Rien
+							n'est impossible.
+						</p>
+
+					</div>
+
 
 				</div>
-				<div class="textTechno" id="textJs">
-					<h4 class="blanc uppercase typeH4 font1 titreTechno">JS</h4>
-					<p class="blanc font3 txtTechno"><span class="margintxt"></span>Un <span class="green">maximum de
-							fonctions</span> sans trop allourdir le code. Sachez que <span class="green">Java
-							Script</span> est mon meilleur ami, j'ai un doute sur 2+2 ? Je créer une fonction qui fait
-						le calcul à ma place.</p>
 
-				</div>
-				<div class="textTechno" id="textPhp">
-					<h4 class="blanc uppercase typeH4 font1 titreTechno">PHP</h4>
-					<p class="blanc font3 txtTechno"><span class="margintxt"></span>PHP me permet de réaliser des
-						connections aux <span class="green">bases de données</span> et de faire les liens fichiers.
-						Besoin d'un <span class="green">DashBoard</span> administrateur pour votre <span
-							class="green">E-commerce</span> avec un système ergonomique et facile à manipuler pour
-						ajouter vos articles? Je m'en occupe.</p>
-
-				</div>
-				<div class="textTechno" id="textSql">
-					<h4 class="blanc uppercase typeH4 font1 titreTechno">SQL</h4>
-					<p class="blanc font3 txtTechno"><span class="margintxt"></span>Une <span
-							class="green">création</span> de base de donnée complexe à partir de quelques fichiers <span
-							class="green">SQL</span>. Des sélections à partir de <span class="green">barre de
-							recherche</span>. Un <span class="green">filtre</span> pour trier par anciennetée. Rien
-						n'est impossible.</p>
-
-				</div>
 			</div>
 		</div>
 	</section>
