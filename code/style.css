@@ -14,45 +14,56 @@
 }
 
 html {
-    width: 100%;
     font-size: 10px;
 }
 
+/* ========CODE REVIEW======== */
+.width {
+    width: 100%;
+}
 .font1 {
     font-family: 'font1';
 }
-
-body {
-    margin: 0;
+.relative{
     position: relative;
-    width: 100%;
-    overflow: hidden;
+}
+.flex {
+    display: flex;
+}
+.align-items{
+    align-items: center;
 }
 
 
-#fontEcran {
-    display: flex;
+
+/* ===END CODE REVIEW=== */
+
+
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#fondEcran {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative;
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(0, 0, 0) 50%);
     overflow: hidden;
     position: absolute;
-    width: 100%;
 }
 
 #effect {
     position: absolute;
     height: 100%;
-    width: 100%;
     z-index: 10;
     opacity: 0;
 }
 
-
-/* -------------------Curseur----------------- */
+/* ------------Curseur----------------- */
 .cursor {
     position: fixed;
     transform: translateX(-50%) translateY(-50%);
@@ -64,14 +75,9 @@ body {
     transition: all 300ms ease-out;
 }
 
-
-
-
 /* ------------Boite de rangement des cubes----------------- */
 #tilt {
-    width: 100%;
     height: 100%;
-    position: relative;
     transform-style: preserve-3d;
     display: block;
     margin: 0 auto;
@@ -79,9 +85,8 @@ body {
     transform: rotateY(35deg);
 }
 
-/* --------------------Gros cube----------------- */
+/* ------------Gros cube----------------- */
 #box1 {
-    width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     display: block;
@@ -147,9 +152,6 @@ body {
     transform: rotateY(0deg) translateZ(200px);
 }
 
-
-
-
 /* --------décord sur le cube-------- */
 .trait1 {
     height: 2px;
@@ -171,11 +173,6 @@ body {
     position: absolute;
     box-shadow: 5px 0px 50px 23px #55FF00;
 }
-
-
-
-
-
 
 /* -------------petits cubes-------------- */
 .face2 {
@@ -216,7 +213,6 @@ body {
 }
 
 #box2 {
-    position: relative;
     transform-style: preserve-3d;
     margin-left: -100%;
     margin-top: 10%;
@@ -224,25 +220,19 @@ body {
 }
 
 #box3 {
-    position: relative;
     transform-style: preserve-3d;
     margin-left: 200%;
     transform: rotateZ(239deg) translateY(68px) translateZ(40px);
 }
 
 #box4 {
-    position: relative;
     transform-style: preserve-3d;
     margin-left: 250%;
     margin-top: 40%;
     transform: translateZ(-500px) rotateZ(45deg);
 }
 
-
-
-
 /* -------------Mini Cube---------------- */
-
 .face3 {
     position: absolute;
     width: 10px;
@@ -280,29 +270,23 @@ body {
 }
 
 #miniBox1 {
-    position: relative;
     transform-style: preserve-3d;
     margin-left: 120%;
     transform: rotateZ(29deg) translateZ(-350px);
 }
 
 #miniBox2 {
-    position: relative;
     transform-style: preserve-3d;
     transform: rotateZ(29deg) translateZ(-89px) translateY(415px) translateX(-66px);
 }
 
 
-
 /*-------- page------------ */
-
 /* ---------------Header ------------------*/
 header {
     position: absolute;
-    width: 100%;
     height: 100vh;
     z-index: 10;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -337,29 +321,21 @@ h2 {
     color: #fff;
 }
 
-
-
-
 /*--------------- menu de navigation --------------------*/
 nav {
     position: absolute;
     padding-top: 20px;
-    width: 100%;
     opacity: 0;
     z-index: 20;
 }
 
 ul {
-    position: relative;
-    display: flex;
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
 }
 
-
 li {
-    position: relative;
     padding: 10px 30px;
     border: solid 2px #42FF00;
     color: #42FF00;
@@ -413,23 +389,10 @@ li:hover {
     font-family: 'font1';
 }
 
-
-
-
-/* --------------------Menu Mobile-------------- */
-
-
-
-
-
-
 /* -------------------Section 1--------------- */
-
 #section1 {
     margin-top: 100vh;
     height: 100vh;
-    width: 100%;
-    display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
@@ -437,10 +400,8 @@ li:hover {
 }
 
 .cartes {
-    display: flex;
     width: 80%;
 }
-
 
 .typeH4 {
     font-size: 4em;
@@ -455,10 +416,7 @@ li:hover {
     margin-block: 0;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-}
+
 
 .icone {
     width: 20px;
@@ -508,7 +466,6 @@ li:hover {
     border: solid 2px #42FF00;
     box-shadow: 8px 8px 16px #42FF00, -8px -8px 16px #45FF00;
     cursor: pointer;
-    position: relative;
     z-index: 20;
     transition: 0.3s;
 }
@@ -519,8 +476,7 @@ li:hover {
     background-color: #42FF00;
 }
 
-.flexArround {
-    display: flex;
+.arround {
     justify-content: space-around;
     align-items: center;
 }
@@ -531,7 +487,6 @@ li:hover {
 
 .card2 {
     width: 33%;
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -542,8 +497,6 @@ li:hover {
 }
 
 .portCard {
-    width: 100%;
-    display: flex;
     justify-content: center;
 }
 
@@ -555,7 +508,6 @@ li:hover {
 }
 
 .textTechno {
-    width: 100%;
     margin-top: -10px;
     border-radius: 10px;
     border: solid 2px #42FF00;
@@ -564,18 +516,10 @@ li:hover {
     transition: 1s;
 }
 
-
-
-
-
-
 /* -------------SECTION2------------ */
-
 #section2 {
     margin-top: 200vh;
     height: 100vh;
-    width: 100%;
-    display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
@@ -583,7 +527,6 @@ li:hover {
 }
 
 .cardProjets {
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -599,7 +542,6 @@ li:hover {
     width: 80%;
     text-align: end;
     cursor: pointer;
-    position: relative;
     z-index: 20;
     transition: 0.3s;
 }
@@ -610,7 +552,6 @@ li:hover {
 }
 
 #card1 {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -644,12 +585,9 @@ li:hover {
 
 
 /* ----------------------SECTION3------------ */
-
 #section3 {
     margin-top: 300vh;
     height: 100vh;
-    width: 100%;
-    display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
@@ -663,13 +601,12 @@ li:hover {
 #section4 {
     margin-top: 400vh;
     height: 100vh;
-    width: 100%;
-    display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
     position: absolute;
 }
+
 
 
 /* annimation de titre */
