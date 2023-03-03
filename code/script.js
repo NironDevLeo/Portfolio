@@ -81,18 +81,17 @@ let textSql = document.getElementById("textSql");
 
 // fonction qui fait l'arrivée du texte des logos page "mes compétences"
 function txt(logo, texte) {
-
   logo.addEventListener('mouseover', () => {
     texte.style.display = 'block';
     setTimeout(() => {
       overtxt(texte);
     }, 10);
   });
-
   logo.addEventListener('mouseout', () => {
       texte.style.display = 'none';
   })
 }
+
 
 function overtxt(param) {
   param.style.transition = '650ms';
@@ -100,6 +99,7 @@ function overtxt(param) {
   param.style.opacity = '1';
   param.style.height ='auto';
 }
+
 
 txt(logoHtml, textHtml);
 txt(logoCss, textCss);
@@ -138,20 +138,12 @@ let experience = document.getElementById('section3');
 let contacter = document.getElementById('section4');
 let btnContacter = document.getElementById('contacter');
 
-let test = document.getElementById('test');
-
 btnBienvenue.addEventListener('click', () => {
   header.style.marginTop = '0';
   competences.style.marginTop = '100vh';
   travail.style.marginTop = '200vh';
   experience.style.marginTop = '300vh';
   contacter.style.marginTop = '400vh';
-
-  header.style.transition = '2s ease-in-out';
-  competences.style.transition = '2s ease-in-out';
-  travail.style.transition = '2s ease-in-out';
-  experience.style.transition = '2s ease-in-out';
-  contacter.style.transition = '2s ease-in-out';
 })
 
 btnCompetences.addEventListener('click', () => {
@@ -160,12 +152,6 @@ btnCompetences.addEventListener('click', () => {
   travail.style.marginTop = '100vh';
   experience.style.marginTop = '200vh';
   contacter.style.marginTop = '300vh';
-
-  header.style.transition = '2s ease-in-out';
-  competences.style.transition = '2s ease-in-out';
-  travail.style.transition = '2s ease-in-out';
-  experience.style.transition = '2s ease-in-out';
-  contacter.style.transition = '2s ease-in-out';
 })
 
 btnTravail.addEventListener('click', () => {
@@ -174,12 +160,6 @@ btnTravail.addEventListener('click', () => {
   travail.style.marginTop = '0';
   experience.style.marginTop = '100vh';
   contacter.style.marginTop = '200vh';
-
-  header.style.transition = '2s ease-in-out';
-  competences.style.transition = '2s ease-in-out';
-  travail.style.transition = '2s ease-in-out';
-  experience.style.transition = '2s ease-in-out';
-  contacter.style.transition = '2s ease-in-out';
 })
 
 btnExperience.addEventListener('click', () => {
@@ -188,12 +168,6 @@ btnExperience.addEventListener('click', () => {
   travail.style.marginTop = '-100vh';
   experience.style.marginTop = '0';
   contacter.style.marginTop = '100vh';
-
-  header.style.transition = '2s ease-in-out';
-  competences.style.transition = '2s ease-in-out';
-  travail.style.transition = '2s ease-in-out';
-  experience.style.transition = '2s ease-in-out';
-  contacter.style.transition = '2s ease-in-out';
 })
 
 btnContacter.addEventListener('click', () => {
@@ -202,10 +176,4 @@ btnContacter.addEventListener('click', () => {
   travail.style.marginTop = '-200vh';
   experience.style.marginTop = '-100vh';
   contacter.style.marginTop = '0';
-
-  header.style.transition = '2s ease-in-out';
-  competences.style.transition = '2s ease-in-out';
-  travail.style.transition = '2s ease-in-out';
-  experience.style.transition = '2s ease-in-out';
-  contacter.style.transition = '2s ease-in-out';
 })
