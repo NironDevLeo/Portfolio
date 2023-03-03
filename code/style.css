@@ -12,9 +12,11 @@
     font-family: 'font3';
     src: url(./static/font/roboto/Roboto-Medium.ttf);
 }
+
 body {
     margin: 0;
 }
+
 #fondEcran {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(0, 0, 0) 50%);
@@ -113,7 +115,6 @@ body {
 /* --------décord sur le cube-------- */
 .trait1 {
     height: 2px;
-    background-color: #42FF00;
     width: 200%;
     transform: rotateZ(45deg);
     margin-top: 60%;
@@ -122,7 +123,6 @@ body {
 
 .trait2 {
     height: 2px;
-    background-color: #42FF00;
     width: 300%;
     transform: rotateZ(147deg);
     margin-top: 20%;
@@ -258,6 +258,7 @@ nav {
 ul {
     list-style-type: none;
 }
+
 li {
     padding: 10px 30px;
     border: solid 2px #42FF00;
@@ -314,7 +315,7 @@ li:hover {
 /* -------------------Section 1--------------- */
 #section1 {
     margin-top: 100vh;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .cartes {
@@ -398,11 +399,6 @@ li:hover {
     width: 33%;
 }
 
-.card2 {
-    width: 33%;
-    align-items: flex-end;
-}
-
 .cardLogo1 {
     width: 80%;
     height: 40px;
@@ -427,17 +423,12 @@ li:hover {
 /* -------------SECTION2------------ */
 #section2 {
     margin-top: 200vh;
-    padding-top: 100px;
-}
-
-.cardProjets {
-    align-items: flex-end;
+    padding-top: 80px;
 }
 
 .separator {
     width: 80%;
     height: 2px;
-    background-color: #42FF00;
 }
 
 .projetList {
@@ -460,37 +451,16 @@ li:hover {
     background-color: #42ff00;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------------SECTION3------------ */
 #section3 {
     margin-top: 300vh;
-    padding-top: 100px;
+    padding-top: 80px;
 }
+
 /* -----------------SECTION4------------ */
 #section4 {
     margin-top: 400vh;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 
@@ -518,50 +488,72 @@ li:hover {
 html {
     font-size: 10px;
 }
+
 .width {
     width: 100%;
 }
+
 .font1 {
     font-family: 'font1';
 }
-.relative{
+
+.relative {
     position: relative;
 }
-.absolute{
+
+.absolute {
     position: absolute;
 }
+
 .flex {
     display: flex;
 }
-.align-center{
+
+.align-center {
     align-items: center;
 }
+
 .arround {
     justify-content: space-around;
 }
-.hidden{
+
+.hidden {
     overflow: hidden;
 }
-.height{
+
+.height {
     height: 100vh;
 }
-.justify-center{
+
+.justify-center {
     justify-content: center;
 }
-.transiScroll{
+
+.transiScroll {
     transition: 2s ease-in-out;
 }
-.flex-column{
+
+.flex-column {
     flex-direction: column;
 }
-.index10{
+
+.index10 {
     z-index: 10;
 }
+
 .blanc {
     color: #fff;
 }
+
 .uppercase {
     text-transform: uppercase;
+}
+
+.backGreen {
+    background-color: #42FF00;
+}
+.align-end{
+    align-items: flex-end;
 }
 
 /* ===END CODE REVIEW=== */
@@ -710,9 +702,11 @@ html {
         height: 300px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
-    .container{
+
+    .container {
         margin-top: 40px;
     }
+
     .top {
         transform: rotateX(90deg) translateZ(150px);
     }
@@ -902,9 +896,11 @@ html {
         height: 180px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
-    .container{
+
+    .container {
         margin-top: 80px;
     }
+
     .top {
         transform: rotateX(90deg) translateZ(90px);
     }
@@ -928,7 +924,6 @@ html {
     .front {
         transform: rotateY(0deg) translateZ(90px);
     }
-
 
     .face2 {
         width: 90px;
@@ -960,7 +955,6 @@ html {
     .front2 {
         transform: rotateY(0deg) translateZ(45px);
     }
-
 
     .trait1 {
         box-shadow: 4px 0px 40px 18px #55FF00;
