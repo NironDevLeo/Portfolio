@@ -13,51 +13,23 @@
     src: url(./static/font/roboto/Roboto-Medium.ttf);
 }
 
-html {
-    font-size: 10px;
-}
 
-/* ========CODE REVIEW======== */
-.width {
-    width: 100%;
-}
-.font1 {
-    font-family: 'font1';
-}
-.relative{
-    position: relative;
-}
-.flex {
-    display: flex;
-}
-.align-items{
-    align-items: center;
-}
-
-
-
-/* ===END CODE REVIEW=== */
 
 
 
 
 body {
     margin: 0;
-    overflow: hidden;
 }
 
 #fondEcran {
     justify-content: center;
-    align-items: center;
     height: 100vh;
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(0, 0, 0) 50%);
-    overflow: hidden;
-    position: absolute;
 }
 
 #effect {
-    position: absolute;
     height: 100%;
     z-index: 10;
     opacity: 0;
@@ -100,16 +72,12 @@ body {
 }
 
 .face {
-    position: absolute;
     width: 400px;
     /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     height: 400px;
     /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     background-color: #000;
     border-radius: 0px;
-    overflow: hidden;
-    align-items: center;
-
 }
 
 .backgroundTop {
@@ -159,7 +127,6 @@ body {
     width: 200%;
     transform: rotateZ(45deg);
     margin-top: 60%;
-    position: absolute;
     box-shadow: 5px 0px 50px 23px #55FF00;
 }
 
@@ -170,22 +137,17 @@ body {
     transform: rotateZ(147deg);
     margin-top: 20%;
     margin-right: 40%;
-    position: absolute;
     box-shadow: 5px 0px 50px 23px #55FF00;
 }
 
 /* -------------petits cubes-------------- */
 .face2 {
-    position: absolute;
     width: 100px;
     /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     height: 100px;
     /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     background-color: #000;
     border-radius: 0px;
-    overflow: hidden;
-    align-items: center;
-
 }
 
 .top2 {
@@ -234,15 +196,12 @@ body {
 
 /* -------------Mini Cube---------------- */
 .face3 {
-    position: absolute;
     width: 10px;
     /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     height: 10px;
     /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     background-color: #000;
     border-radius: 0px;
-    overflow: hidden;
-    align-items: center;
 }
 
 .top3 {
@@ -284,11 +243,9 @@ body {
 /*-------- page------------ */
 /* ---------------Header ------------------*/
 header {
-    position: absolute;
     height: 100vh;
     z-index: 10;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 
 
@@ -323,18 +280,14 @@ h2 {
 
 /*--------------- menu de navigation --------------------*/
 nav {
-    position: absolute;
     padding-top: 20px;
     opacity: 0;
     z-index: 20;
 }
 
 ul {
-    justify-content: space-around;
-    align-items: center;
     list-style-type: none;
 }
-
 li {
     padding: 10px 30px;
     border: solid 2px #42FF00;
@@ -393,10 +346,8 @@ li:hover {
 #section1 {
     margin-top: 100vh;
     height: 100vh;
-    align-items: center;
     flex-direction: column;
     padding-top: 100px;
-    position: absolute;
 }
 
 .cartes {
@@ -476,11 +427,6 @@ li:hover {
     background-color: #42FF00;
 }
 
-.arround {
-    justify-content: space-around;
-    align-items: center;
-}
-
 .card {
     width: 33%;
 }
@@ -520,10 +466,8 @@ li:hover {
 #section2 {
     margin-top: 200vh;
     height: 100vh;
-    align-items: center;
     flex-direction: column;
     padding-top: 100px;
-    position: absolute;
 }
 
 .cardProjets {
@@ -553,7 +497,6 @@ li:hover {
 
 #card1 {
     justify-content: center;
-    align-items: center;
 }
 
 #carrouss {
@@ -584,19 +527,18 @@ li:hover {
 
 
 
-/* ----------------------SECTION3------------ */
+/* --------------SECTION3------------ */
 #section3 {
     margin-top: 300vh;
     height: 100vh;
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
-    position: absolute;
 }
 
 
 
-/* ----------------------SECTION4------------ */
+/* -----------------SECTION4------------ */
 
 #section4 {
     margin-top: 400vh;
@@ -604,11 +546,10 @@ li:hover {
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
-    position: absolute;
 }
 
 
-
+/*====================ANIMATIONS=================== */
 /* annimation de titre */
 @keyframes titre {
     0% {
@@ -628,8 +569,44 @@ li:hover {
 
 
 
+/* ========CODE REVIEW======== */
+html {
+    font-size: 10px;
+}
+.width {
+    width: 100%;
+}
+.font1 {
+    font-family: 'font1';
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.flex {
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.arround {
+    justify-content: space-around;
+}
+.hidden{
+    overflow: hidden;
+}
 
-/* ------------------RESPONSIVE--------------------- */
+
+
+/* ===END CODE REVIEW=== */
+
+
+
+
+
+/* =====================RESPONSIVE====================*/
 @media (max-width: 1800px) {
     html {
         font-size: 8px
@@ -769,7 +746,9 @@ li:hover {
         height: 300px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
-
+    .container{
+        margin-top: 40px;
+    }
     .top {
         transform: rotateX(90deg) translateZ(150px);
     }
@@ -959,7 +938,9 @@ li:hover {
         height: 180px;
         /* (-1-) augmenter ou diminuer selon taille écran pour le cube */
     }
-
+    .container{
+        margin-top: 80px;
+    }
     .top {
         transform: rotateX(90deg) translateZ(90px);
     }
